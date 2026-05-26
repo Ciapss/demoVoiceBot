@@ -1,14 +1,162 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "customers": [
+        {
+            "id": "CUS-1001",
+            "firstName": "Maya",
+            "lastName": "Green",
+            "verificationCode": "1842",
+            "email": "maya.green@example.invalid",
+            "phoneLastFour": "3198",
+            "preferredLanguage": "English"
+        },
+        {
+            "id": "CUS-1002",
+            "firstName": "Daniel",
+            "lastName": "Park",
+            "verificationCode": "5720",
+            "email": "daniel.park@example.invalid",
+            "phoneLastFour": "4407",
+            "preferredLanguage": "English"
+        },
+        {
+            "id": "CUS-1003",
+            "firstName": "Lena",
+            "lastName": "Morris",
+            "verificationCode": "9064",
+            "email": "lena.morris@example.invalid",
+            "phoneLastFour": "8821",
+            "preferredLanguage": "English"
+        }
+    ],
+    "orders": [
+        {
+            "id": "ORD-10428",
+            "customerId": "CUS-1001",
+            "placedAt": "2026-05-22T10:14:00Z",
+            "status": "Shipped",
+            "items": [
+                {
+                    "name": "Wireless headphones",
+                    "quantity": 1,
+                    "price": 89.90
+                },
+                {
+                    "name": "Protective travel case",
+                    "quantity": 1,
+                    "price": 14.50
+                }
+            ],
+            "currency": "EUR",
+            "total": 104.40,
+            "delivery": {
+                "method": "Courier",
+                "trackingNumber": "TRK-558-204-PL",
+                "expectedDate": "2026-05-28",
+                "timeWindow": "12:00-16:00",
+                "address": "14 Sample Street, 00-101 Warsaw",
+                "lastUpdate": "Parcel left the regional sorting centre."
+            }
+        },
+        {
+            "id": "ORD-10503",
+            "customerId": "CUS-1002",
+            "placedAt": "2026-05-25T08:40:00Z",
+            "status": "Processing",
+            "items": [
+                {
+                    "name": "Desk lamp",
+                    "quantity": 1,
+                    "price": 39.00
+                }
+            ],
+            "currency": "EUR",
+            "total": 39.00,
+            "delivery": {
+                "method": "Pickup point",
+                "trackingNumber": null,
+                "expectedDate": "2026-05-30",
+                "timeWindow": null,
+                "address": "Central Pickup Point, Locker 12",
+                "lastUpdate": "Order is being prepared for dispatch."
+            }
+        },
+        {
+            "id": "ORD-10211",
+            "customerId": "CUS-1003",
+            "placedAt": "2026-05-12T15:06:00Z",
+            "status": "Delivered",
+            "items": [
+                {
+                    "name": "Reusable water bottle",
+                    "quantity": 2,
+                    "price": 18.90
+                }
+            ],
+            "currency": "EUR",
+            "total": 37.80,
+            "delivery": {
+                "method": "Courier",
+                "trackingNumber": "TRK-120-991-PL",
+                "expectedDate": "2026-05-15",
+                "deliveredAt": "2026-05-15T11:37:00Z",
+                "address": "8 Example Avenue, 30-002 Krakow",
+                "lastUpdate": "Delivered to recipient."
+            }
+        }
+    ],
+    "appointments": [
+        {
+            "id": "APT-2307",
+            "customerId": "CUS-1001",
+            "topic": "Product setup consultation",
+            "status": "Confirmed",
+            "date": "2026-06-03",
+            "time": "10:30",
+            "timeZone": "Europe/Warsaw",
+            "channel": "Video call",
+            "notes": "Link will be sent 30 minutes before the meeting."
+        },
+        {
+            "id": "APT-2319",
+            "customerId": "CUS-1002",
+            "topic": "Return collection arrangement",
+            "status": "Awaiting confirmation",
+            "date": "2026-06-01",
+            "time": "14:00",
+            "timeZone": "Europe/Warsaw",
+            "channel": "Phone call",
+            "notes": "Customer requested an afternoon call."
+        },
+        {
+            "id": "APT-2261",
+            "customerId": "CUS-1003",
+            "topic": "General support conversation",
+            "status": "Completed",
+            "date": "2026-05-18",
+            "time": "09:00",
+            "timeZone": "Europe/Warsaw",
+            "channel": "Phone call",
+            "notes": "No further action required."
+        }
+    ],
+    "supportTickets": [
+        {
+            "id": "TCK-7012",
+            "customerId": "CUS-1001",
+            "subject": "Delivery time window request",
+            "status": "Open",
+            "priority": "Normal",
+            "createdAt": "2026-05-24T09:20:00Z",
+            "lastUpdate": "Request sent to delivery scheduling team."
+        },
+        {
+            "id": "TCK-6998",
+            "customerId": "CUS-1003",
+            "subject": "Invoice copy request",
+            "status": "Resolved",
+            "priority": "Low",
+            "createdAt": "2026-05-16T13:44:00Z",
+            "lastUpdate": "Invoice copy sent by email."
+        }
+    ]
 }
